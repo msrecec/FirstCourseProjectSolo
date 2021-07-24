@@ -7,6 +7,9 @@
           <app-shopping-list-edit (addedIngredients)='addShoppingItems($event)' [ingredients]='ingredients'>
           </app-shopping-list-edit>
         </div>
+        <div class="col-6">
+          <app-shopping-list [selectedIngredients]='selectedIngredients'></app-shopping-list>
+        </div>
       </div>
     </ng-template>
   </li>

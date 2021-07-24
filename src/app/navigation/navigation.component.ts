@@ -21,6 +21,8 @@ export class NavigationComponent implements OnInit {
    */
 
   addShoppingItems(selectedIngredients: Ingredient[]) {
+    console.log('Added shopping items Ingredients');
+    console.dir(selectedIngredients);
     this.selectedIngredients = selectedIngredients;
   }
 

@@ -34,28 +34,19 @@ export class ShoppingListEditComponent implements OnInit {
   }
 
   /**
-   * Removes an element from the list of selected ingredients
-   *
-   * @param ingredient unselected ingredient
-   */
-  removeFromSelectedIngredients(ingredient: Ingredient) {
-    const index = this.selectedIngredients.indexOf(ingredient);
-    if (index >= 0) {
-      this.selectedIngredients.splice(index, 1);
-    } else {
-      console.error(
-        'Error while pushing shopping list items, element is already included!'
-      );
-    }
-  }
-
-  /**
    * Add Ingredients to list of selected Ingredients
    *
    */
 
   addIngredients() {
-    this.addedIngredients.emit(this.selectedIngredients);
+    this.ingredients?.forEach((i) => {
+      if (i.selected) {
+        i.selected = false;
+        this.addToSelectedIngredients(i);
+      }
+    });
+    const sentIngredients = this.selectedIngredients;
+    this.addedIngredients.emit(sentIngredients);
     this.selectedIngredients = [];
   }
 
@@ -67,7 +58,9 @@ export class ShoppingListEditComponent implements OnInit {
   clearIngredients() {
     this.selectedIngredients = [];
     this.ingredients?.forEach((i) => {
-      i.selected = false;
+      if (i.selected) {
+        i.selected = false;
+      }
     });
   }
 }

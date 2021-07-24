@@ -7,9 +7,7 @@ import { Ingredient } from '../models/ingredient.model';
   styleUrls: ['./shopping-list.component.css'],
 })
 export class ShoppingListComponent implements OnInit {
-  @Input() ingredients?: Ingredient[];
-
-  selectedIngredients: Ingredient[] = [];
+  @Input() selectedIngredients?: Ingredient[];
 
   constructor() {}
 
