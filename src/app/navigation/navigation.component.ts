@@ -43,6 +43,10 @@ export class NavigationComponent implements OnInit {
     this.selectedIngredients = JSON.parse(JSON.stringify(selectedIngredients));
   }
 
+  removeIngredients(ingredientsForRemoval: Ingredient[]) {
+    this.ingredients = JSON.parse(JSON.stringify(ingredientsForRemoval));
+  }
+
   /**
    * Clears the list of shopping items
    *

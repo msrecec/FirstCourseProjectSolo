@@ -2,4 +2,14 @@
 <h2>Ingredient list</h2>
 <br>
 <hr>
-<app-ingredient-item *ngFor='let ingredient of ingredients' [ingredient]='ingredient'></app-ingredient-item>
+<app-ingredient-item *ngFor='let ingredient of ingredients' [ingredient]='ingredient'
+  (click)='toggleSelected(ingredient)'></app-ingredient-item>
+<br>
+<div class="d-flex justify-content-center">
+  <button [ngStyle]="{margin: '1px'}" (click)='removeAll()' class="btn btn-danger btn-space">Remove all
+    ingredients</button>
+  <button [ngStyle]="{margin: '1px'}" (click)='removeSelected()' class="btn btn-success btn-space">Remove selected
+    ingredients</button>
+</div>
+<br>
+<br>
