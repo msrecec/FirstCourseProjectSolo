@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Ingredient } from '../models/ingredient.model';
 
 @Component({
@@ -8,6 +8,7 @@ import { Ingredient } from '../models/ingredient.model';
 })
 export class ShoppingListEditComponent implements OnInit {
   @Input() ingredients?: Ingredient[];
+  @Output() addedIngredients = new EventEmitter<Ingredient[]>();
 
   selectedIngredients: Ingredient[] = [];
 
@@ -46,6 +47,16 @@ export class ShoppingListEditComponent implements OnInit {
         'Error while pushing shopping list items, element is already included!'
       );
     }
+  }
+
+  /**
+   * Add Ingredients to list of selected Ingredients
+   *
+   */
+
+  addIngredients() {
+    this.addedIngredients.emit(this.selectedIngredients);
+    this.selectedIngredients = [];
   }
 
   submitSelectedIngredients() {}

@@ -20,6 +20,11 @@ export class ShoppingListItemComponent implements OnInit {
     }
   }
 
+  /**
+   * Toggles selected item
+   *
+   */
+
   toggleSelectItem() {
     if (typeof this.ingredient !== undefined) {
       this.ingredient!.selected = !this.ingredient!.selected;
