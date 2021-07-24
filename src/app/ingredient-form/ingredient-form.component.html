@@ -1,4 +1,11 @@
 <div>
-  <input type="text" placeholder="name">
-  <input type="checkbox" name="halal" id="halal">
+  <label for="name">Name of the Ingredient is:
+    <input [(ngModel)]='name' type="text" placeholder="name">
+  </label>
+  <label for="halal">Ingredient is halal:
+    <input [(ngModel)]='halal' type="checkbox" name="halal" id="halal">
+  </label>
+  <br>
+  <button (click)='clearIngredient()' class="btn btn-danger">Clear ingredients</button>
+  <button (click)='addIngredient()' class="btn btn-primary">Add ingredients</button>
 </div>

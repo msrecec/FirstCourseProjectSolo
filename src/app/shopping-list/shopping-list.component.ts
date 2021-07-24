@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 import { Ingredient } from '../models/ingredient.model';
 
 @Component({
@@ -8,6 +8,7 @@ import { Ingredient } from '../models/ingredient.model';
 })
 export class ShoppingListComponent implements OnInit {
   @Input() selectedIngredients?: Ingredient[];
+  @Output() clearList = new EventEmitter<Ingredient[]>();
 
   constructor() {}
 
@@ -19,6 +20,6 @@ export class ShoppingListComponent implements OnInit {
    */
 
   clearShoppingList() {
-    this.selectedIngredients = [];
+    this.clearList.emit([]);
   }
 }

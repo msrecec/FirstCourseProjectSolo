@@ -8,14 +8,39 @@
           </app-shopping-list-edit>
         </div>
         <div class="col-6">
-          <app-shopping-list [selectedIngredients]='selectedIngredients'></app-shopping-list>
+          <app-shopping-list (clearList)='clearIngredients()' [selectedIngredients]='selectedIngredients'>
+          </app-shopping-list>
         </div>
       </div>
     </ng-template>
   </li>
   <li ngbNavItem>
     <a ngbNavLink>Recipe Book</a>
-    <ng-template ngbNavContent>Recipe Book</ng-template>
+    <ng-template ngbNavContent>
+      <div class="row">
+        <div class="col-6">
+          <app-ingredient-form>
+          </app-ingredient-form>
+        </div>
+        <div class="col-6">
+          <app-shopping-list></app-shopping-list>
+        </div>
+      </div>
+    </ng-template>
+  </li>
+  <li ngbNavItem>
+    <a ngbNavLink>Ingredients</a>
+    <ng-template ngbNavContent>
+      <div class="row">
+        <div class="col-6">
+          <app-ingredient-form>
+          </app-ingredient-form>
+        </div>
+        <div class="col-6">
+          <app-shopping-list></app-shopping-list>
+        </div>
+      </div>
+    </ng-template>
   </li>
 </ul>
 <div [ngbNavOutlet]="nav"></div>
