@@ -1,7 +1,11 @@
 import { Ingredient } from './ingredient.model';
 
 export class Recipe {
-  id: number;
-  name: string;
-  ingredients: Ingredient[];
+  name!: string;
+  ingredients!: Ingredient[];
+
+  constructor(name: string, ingredients: Ingredient[]) {
+    this.name = name;
+    this.ingredients = ingredients;
+  }
 }
