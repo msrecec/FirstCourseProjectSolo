@@ -2,11 +2,11 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Ingredient } from '../models/ingredient.model';
 
 @Component({
-  selector: 'app-ingredient-list',
-  templateUrl: './ingredient-list.component.html',
-  styleUrls: ['./ingredient-list.component.css'],
+  selector: 'app-ingredient-list-edit',
+  templateUrl: './ingredient-list-edit.component.html',
+  styleUrls: ['./ingredient-list-edit.component.css'],
 })
-export class IngredientListComponent implements OnInit {
+export class IngredientListEditComponent implements OnInit {
   @Input() ingredients?: Ingredient[];
   @Output() removeIngredients = new EventEmitter<Ingredient[]>();
   localIngredients: Ingredient[] = [];

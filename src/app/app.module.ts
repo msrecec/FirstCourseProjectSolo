@@ -13,7 +13,7 @@ import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { FormsModule } from '@angular/forms';
 import { ShoppingListItemComponent } from './shopping-list-item/shopping-list-item.component';
 import { IngredientFormComponent } from './ingredient-form/ingredient-form.component';
-import { IngredientListComponent } from './ingredient-list/ingredient-list.component';
+import { IngredientListEditComponent } from './ingredient-list-edit/ingredient-list-edit.component';
 import { IngredientItemComponent } from './ingredient-item/ingredient-item.component';
 
 @NgModule({
@@ -28,7 +28,7 @@ import { IngredientItemComponent } from './ingredient-item/ingredient-item.compo
     RecipeDetailComponent,
     ShoppingListItemComponent,
     IngredientFormComponent,
-    IngredientListComponent,
+    IngredientListEditComponent,
     IngredientItemComponent,
   ],
   imports: [BrowserModule, NgbModule, FormsModule],

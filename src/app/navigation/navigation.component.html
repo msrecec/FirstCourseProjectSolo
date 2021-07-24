@@ -37,8 +37,8 @@
           </app-ingredient-form>
         </div>
         <div class="col-6">
-          <app-ingredient-list (removeIngredients)='removeIngredients($event)' [ingredients]='ingredients'>
-          </app-ingredient-list>
+          <app-ingredient-list-edit (removeIngredients)='removeIngredients($event)' [ingredients]='ingredients'>
+          </app-ingredient-list-edit>
         </div>
       </div>
     </ng-template>
