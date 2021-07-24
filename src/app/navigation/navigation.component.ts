@@ -7,8 +7,17 @@ import { Ingredient } from '../models/ingredient.model';
   styleUrls: ['./navigation.component.css'],
 })
 export class NavigationComponent implements OnInit {
-  @Input() ingredients?: Ingredient[];
   selectedIngredients: Ingredient[] = [];
+
+  ingredients: Ingredient[] = [
+    new Ingredient('pork', false),
+    new Ingredient('carrot', true),
+    new Ingredient('chicken', true),
+    new Ingredient('potato', true),
+    new Ingredient('rice', true),
+    new Ingredient('pork fat', false),
+    new Ingredient('eggs', true),
+  ];
 
   constructor() {}
 
