@@ -24,6 +24,16 @@ export class NavigationComponent implements OnInit {
   ngOnInit(): void {}
 
   /**
+   * Added new Ingredient to the list
+   *
+   * @param ingredient new ingredient
+   */
+
+  addIngredient(ingredient: Ingredient) {
+    this.ingredients.push(ingredient);
+  }
+
+  /**
    * Adds the ingredients to the list of shopping items
    *
    * @param selectedIngredients selected ingredients emitted by EventEmitter

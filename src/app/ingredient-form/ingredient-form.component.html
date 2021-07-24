@@ -1,3 +1,7 @@
+<br>
+<h2>New ingredient</h2>
+<br>
+<hr>
 <div>
   <label for="name">Name of the Ingredient is:
     <input [(ngModel)]='name' type="text" placeholder="name">
@@ -6,6 +10,8 @@
     <input [(ngModel)]='halal' type="checkbox" name="halal" id="halal">
   </label>
   <br>
-  <button (click)='clearIngredient()' class="btn btn-danger">Clear ingredients</button>
-  <button (click)='addIngredient()' class="btn btn-primary">Add ingredients</button>
+  <div class="d-flex justify-content-center">
+    <button [ngStyle]="{margin: '1px'}" (click)='clearIngredient()' class="btn btn-danger">Clear ingredients</button>
+    <button [ngStyle]="{margin: '1px'}" (click)='addIngredient()' class="btn btn-primary">Add ingredients</button>
+  </div>
 </div>

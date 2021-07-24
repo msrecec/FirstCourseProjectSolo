@@ -33,11 +33,12 @@
     <ng-template ngbNavContent>
       <div class="row">
         <div class="col-6">
-          <app-ingredient-form (addedNewIngredient)='clearIngredients()'>
+          <app-ingredient-form (addedNewIngredient)='addIngredient($event)' (addedNewIngredient)='clearIngredients()'>
           </app-ingredient-form>
         </div>
         <div class="col-6">
-          <app-ingredient-list></app-ingredient-list>
+          <app-ingredient-list [ingredients]='ingredients'>
+          </app-ingredient-list>
         </div>
       </div>
     </ng-template>
