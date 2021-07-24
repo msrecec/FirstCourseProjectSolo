@@ -1,10 +1,13 @@
 <div>
+  <br>
+  <h2>Select Ingredients</h2>
+  <br>
   <div *ngFor='let ingredient of ingredients; let i = index' [attr.data-index]='i'>
     <app-shopping-list-item [i]='i' [ingredient]='ingredient'></app-shopping-list-item>
   </div>
   <br>
   <div class="d-flex justify-content-center">
-    <button (click)='clearIngredients()' class="btn btn-danger btn-space">Clear ingredients</button>
+    <button (click)='clearSelectedIngredients()' class="btn btn-danger btn-space">Clear ingredients</button>
     <button (click)='addIngredients()' class="btn btn-primary btn-space">Add ingredients</button>
   </div>
   <br>

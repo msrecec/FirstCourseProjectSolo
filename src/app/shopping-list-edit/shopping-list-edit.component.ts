@@ -55,7 +55,7 @@ export class ShoppingListEditComponent implements OnInit {
    *
    */
 
-  clearIngredients() {
+  clearSelectedIngredients() {
     this.selectedIngredients = [];
     this.ingredients?.forEach((i) => {
       if (i.selected) {

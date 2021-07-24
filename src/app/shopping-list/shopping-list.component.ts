@@ -12,4 +12,13 @@ export class ShoppingListComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  /**
+   * Clears the Shopping list
+   *
+   */
+
+  clearShoppingList() {
+    this.selectedIngredients = [];
+  }
 }
