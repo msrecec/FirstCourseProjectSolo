@@ -11,6 +11,7 @@ export class ShoppingListItemComponent implements OnInit {
   @Input() i?: number;
 
   enumeration: number = 0;
+  selected: boolean = false;
 
   constructor() {}
 
@@ -18,5 +19,10 @@ export class ShoppingListItemComponent implements OnInit {
     if (typeof this.i != undefined) {
       this.enumeration = this.i!;
     }
+  }
+
+  toggleSelectItem() {
+    this.selected = !this.selected;
+    console.log('Clicked item');
   }
 }

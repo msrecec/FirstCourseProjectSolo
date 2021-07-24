@@ -1,4 +1,5 @@
-<div class="card-body">
+<div class="card-body" (click)='toggleSelectItem()' [ngStyle]="{backgroundColor: selected ? 'blue': 'white'}"
+  [ngClass]="{selected: selected}">
   <h5 class="card-title">{{enumeration+1}}. ingredient: {{ingredient?.name}}</h5>
   <p class="card-text">{{ingredient?.name}} {{ingredient?.halal ? 'is halal' : 'is not
     halal'}}</p>
