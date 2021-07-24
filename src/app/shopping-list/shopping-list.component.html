@@ -2,8 +2,10 @@
   <br>
   <h2>Shopping list</h2>
   <br>
+  <hr>
   <div *ngFor='let selectedIngredient of selectedIngredients; let i = index' [attr.data-index]='i' class="card">
-    <app-shopping-list-item [i]='i' [ingredient]='selectedIngredient'></app-shopping-list-item>
+    <app-shopping-list-item [ngStyle]="{color: selectedIngredient.halal ? 'black': 'red'}" [i]='i'
+      [ingredient]='selectedIngredient'></app-shopping-list-item>
   </div>
   <br>
   <div *ngIf='selectedIngredients?.length' class="d-flex justify-content-center">

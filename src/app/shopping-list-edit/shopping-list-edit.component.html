@@ -2,6 +2,7 @@
   <br>
   <h2>Select Ingredients</h2>
   <br>
+  <hr>
   <div *ngFor='let ingredient of ingredients; let i = index' [attr.data-index]='i'>
     <app-shopping-list-item [i]='i' [ingredient]='ingredient'></app-shopping-list-item>
   </div>
