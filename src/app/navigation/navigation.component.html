@@ -1,7 +1,9 @@
 <ul ngbNav #nav="ngbNav" class="nav-tabs">
   <li ngbNavItem>
     <a ngbNavLink>Shopping List</a>
-    <ng-template ngbNavContent>Shopping List</ng-template>
+    <ng-template ngbNavContent>
+      <app-shopping-list [ingredients]='ingredients'></app-shopping-list>
+    </ng-template>
   </li>
   <li ngbNavItem>
     <a ngbNavLink>Recipe Book</a>
