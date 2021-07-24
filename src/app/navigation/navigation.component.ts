@@ -8,8 +8,28 @@ import { Ingredient } from '../models/ingredient.model';
 })
 export class NavigationComponent implements OnInit {
   @Input() ingredients?: Ingredient[];
+  selectedIngredients: Ingredient[] = [];
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  /**
+   * Adds the ingredients to the list of shopping items
+   *
+   * @param selectedIngredients selected ingredients emitted by EventEmitter
+   */
+
+  addShoppingItems(selectedIngredients: Ingredient[]) {
+    this.selectedIngredients = selectedIngredients;
+  }
+
+  /**
+   * Clears the list of shopping items
+   *
+   */
+
+  clearIngredients() {
+    this.selectedIngredients = [];
+  }
 }

@@ -2,7 +2,12 @@
   <li ngbNavItem>
     <a ngbNavLink>Shopping List</a>
     <ng-template ngbNavContent>
-      <app-shopping-list-edit [ingredients]='ingredients'></app-shopping-list-edit>
+      <div class="row">
+        <div class="col-6">
+          <app-shopping-list-edit (addedIngredients)='addShoppingItems($event)' [ingredients]='ingredients'>
+          </app-shopping-list-edit>
+        </div>
+      </div>
     </ng-template>
   </li>
   <li ngbNavItem>

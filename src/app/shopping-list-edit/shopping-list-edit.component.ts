@@ -59,5 +59,15 @@ export class ShoppingListEditComponent implements OnInit {
     this.selectedIngredients = [];
   }
 
-  submitSelectedIngredients() {}
+  /**
+   * Clears the list of selected Ingredients
+   *
+   */
+
+  clearIngredients() {
+    this.selectedIngredients = [];
+    this.ingredients?.forEach((i) => {
+      i.selected = false;
+    });
+  }
 }
