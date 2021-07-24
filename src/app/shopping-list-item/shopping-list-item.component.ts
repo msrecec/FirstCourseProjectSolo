@@ -11,7 +11,6 @@ export class ShoppingListItemComponent implements OnInit {
   @Input() i?: number;
 
   enumeration: number = 0;
-  selected: boolean = false;
 
   constructor() {}
 
@@ -22,7 +21,12 @@ export class ShoppingListItemComponent implements OnInit {
   }
 
   toggleSelectItem() {
-    this.selected = !this.selected;
-    console.log('Clicked item');
+    if (typeof this.ingredient !== undefined) {
+      this.ingredient!.selected = !this.ingredient!.selected;
+    } else {
+      console.error(
+        'Error while calling toggleSelectItem(): ingredient is undefined!'
+      );
+    }
   }
 }

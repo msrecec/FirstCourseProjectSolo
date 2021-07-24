@@ -1,1 +1,7 @@
-<p>shopping-list-edit works!</p>
+<div class="row">
+  <div class="col-6">
+    <div *ngFor='let ingredient of ingredients; let i = index' [attr.data-index]='i' class="card">
+      <app-shopping-list-item [i]='i' [ingredient]='ingredient'></app-shopping-list-item>
+    </div>
+  </div>
+</div>
