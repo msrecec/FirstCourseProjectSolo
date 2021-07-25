@@ -19,8 +19,7 @@
     <ng-template ngbNavContent>
       <div class="row">
         <div class="col-6">
-          <app-ingredient-form>
-          </app-ingredient-form>
+
         </div>
         <div class="col-6">
           <app-shopping-list></app-shopping-list>
@@ -37,7 +36,7 @@
           </app-ingredient-form>
         </div>
         <div class="col-6">
-          <app-ingredient-list-edit (removeIngredients)='removeIngredients($event)' [ingredients]='ingredients'>
+          <app-ingredient-list-edit (removeIngredients)='replaceIngredients($event)' [ingredients]='ingredients'>
           </app-ingredient-list-edit>
         </div>
       </div>

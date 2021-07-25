@@ -9,7 +9,6 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingListEditComponent } from './shopping-list-edit/shopping-list-edit.component';
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { RecipeItemComponent } from './recipe-item/recipe-item.component';
-import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { FormsModule } from '@angular/forms';
 import { ShoppingListItemComponent } from './shopping-list-item/shopping-list-item.component';
 import { IngredientFormComponent } from './ingredient-form/ingredient-form.component';
@@ -25,7 +24,6 @@ import { IngredientItemComponent } from './ingredient-item/ingredient-item.compo
     ShoppingListEditComponent,
     RecipeListComponent,
     RecipeItemComponent,
-    RecipeDetailComponent,
     ShoppingListItemComponent,
     IngredientFormComponent,
     IngredientListEditComponent,
