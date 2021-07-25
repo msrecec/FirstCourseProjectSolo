@@ -14,6 +14,7 @@ import { ShoppingListItemComponent } from './shopping-list-item/shopping-list-it
 import { IngredientFormComponent } from './ingredient-form/ingredient-form.component';
 import { IngredientListEditComponent } from './ingredient-list-edit/ingredient-list-edit.component';
 import { IngredientItemComponent } from './ingredient-item/ingredient-item.component';
+import { RecipeFormComponent } from './recipe-form/recipe-form.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { IngredientItemComponent } from './ingredient-item/ingredient-item.compo
     IngredientFormComponent,
     IngredientListEditComponent,
     IngredientItemComponent,
+    RecipeFormComponent,
   ],
   imports: [BrowserModule, NgbModule, FormsModule],
   providers: [],
