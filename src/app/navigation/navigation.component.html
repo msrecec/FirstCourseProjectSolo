@@ -19,10 +19,10 @@
     <ng-template ngbNavContent>
       <div class="row">
         <div class="col-6">
-          <app-recipe-form [ingredients]='ingredients'></app-recipe-form>
+          <app-recipe-form (addRecipe)='addRecipe($event)' [ingredients]='ingredients'></app-recipe-form>
         </div>
         <div class="col-6">
-          <app-recipe-list [recipes]='recipes'></app-recipe-list>
+          <app-recipe-list (clearItem)='clearRecipe($event)' [recipes]='recipes'></app-recipe-list>
         </div>
       </div>
     </ng-template>

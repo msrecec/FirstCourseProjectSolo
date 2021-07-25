@@ -28,4 +28,42 @@ export class RecipeFormComponent implements OnInit {
   toggle(ingredient: Ingredient) {
     ingredient.selected = !ingredient.selected;
   }
+
+  /**
+   * Adding new recipe and emitts the event
+   *
+   */
+
+  addRecipeItem() {
+    if (typeof this.name == 'string') {
+      this.copiedIngredients.forEach((i) => {
+        if (i.selected) {
+          i.selected = false;
+          this.selectedIngredients.push(i);
+        }
+      });
+      this.selectedIngredients = JSON.parse(
+        JSON.stringify(this.selectedIngredients)
+      );
+      const recipe = new Recipe(this.name, this.selectedIngredients);
+      this.addRecipe.emit(recipe);
+      this.selectedIngredients = [];
+      this.name = '';
+    } else {
+      console.error('Error while adding the recipe.');
+    }
+  }
+
+  /**
+   * Clears recipe items
+   *
+   */
+
+  clearRecipeItem() {
+    this.name = '';
+    this.copiedIngredients.forEach((i) => {
+      i.selected = false;
+    });
+    this.selectedIngredients = [];
+  }
 }

@@ -66,6 +66,32 @@ export class NavigationComponent implements OnInit {
   }
 
   /**
+   * Adds new recipe item
+   *
+   * @param recipe new recipe
+   */
+
+  addRecipe(recipe: Recipe) {
+    this.recipes.push(recipe);
+  }
+
+  /**
+   * Clears new recipe item from the list of recipes
+   *
+   */
+
+  clearRecipe(recipe: Recipe) {
+    const index = this.recipes.indexOf(recipe);
+    if (index >= 0) {
+      this.recipes.splice(index, 1);
+    } else {
+      console.error(
+        'Error while clearing shopping list items, element is not included!'
+      );
+    }
+  }
+
+  /**
    *Replaces ingredients with selected ingredients
    *
    * @param ingredientsForRemoval

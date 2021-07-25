@@ -1,4 +1,7 @@
-<div>
+<div class="card" style="padding: 5px; margin: 5px">
   <h3>{{recipe?.name}}</h3>
   <app-ingredient-item *ngFor='let ingredient of recipe?.ingredients' [ingredient]='ingredient'></app-ingredient-item>
+  <div class="d-flex justify-content-center">
+    <button (click)='remove()' style="margin: 5px" class="btn btn-danger btn-space">Remove</button>
+  </div>
 </div>

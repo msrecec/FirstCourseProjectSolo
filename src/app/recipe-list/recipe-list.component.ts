@@ -8,9 +8,19 @@ import { Recipe } from '../models/recipe.model';
 })
 export class RecipeListComponent implements OnInit {
   @Input() recipes?: Recipe[];
-  @Output() clearList = new EventEmitter<Recipe[]>();
+  @Output() clearItem = new EventEmitter<Recipe>();
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  /**
+   * Emitts clearing of recipe item
+   *
+   * @param recipe clears recipe item
+   */
+
+  clear(recipe: Recipe) {
+    this.clearItem.emit(recipe);
+  }
 }
