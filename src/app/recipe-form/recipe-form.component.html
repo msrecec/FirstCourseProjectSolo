@@ -2,7 +2,8 @@
   <div class="d-flex justify-content-center">
     <input style="margin: 5px" required [(ngModel)]='name' type="text" placeholder="Recipe name">
   </div>
-  <app-ingredient-item *ngFor='let ingredient of ingredients' [ingredient]='ingredient'>
+  <app-ingredient-item *ngFor='let ingredient of copiedIngredients' [ingredient]='ingredient'
+    (click)='toggle(ingredient)'>
   </app-ingredient-item>
   <br>
   <div class="d-flex justify-content-center">

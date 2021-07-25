@@ -10,6 +10,7 @@ import { Recipe } from '../models/recipe.model';
 export class RecipeFormComponent implements OnInit {
   @Input() ingredients?: Ingredient[];
   @Output() addRecipe = new EventEmitter<Recipe>();
+  copiedIngredients: Ingredient[] = [];
   selectedIngredients: Ingredient[] = [];
 
   name?: string;
@@ -20,5 +21,11 @@ export class RecipeFormComponent implements OnInit {
     ingredient.selected = !ingredient.selected;
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.copiedIngredients = JSON.parse(JSON.stringify(this.ingredients));
+  }
+
+  toggle(ingredient: Ingredient) {
+    ingredient.selected = !ingredient.selected;
+  }
 }
