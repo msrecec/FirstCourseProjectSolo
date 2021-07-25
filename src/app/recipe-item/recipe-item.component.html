@@ -1,1 +1,4 @@
-<p>recipe-item works!</p>
+<div>
+  <h3>{{recipe?.name}}</h3>
+  <app-ingredient-item *ngFor='let ingredient of recipe?.ingredients' [ingredient]='ingredient'></app-ingredient-item>
+</div>
