@@ -15,6 +15,9 @@ import { IngredientFormComponent } from './ingredient-form/ingredient-form.compo
 import { IngredientListEditComponent } from './ingredient-list-edit/ingredient-list-edit.component';
 import { IngredientItemComponent } from './ingredient-item/ingredient-item.component';
 import { RecipeFormComponent } from './recipe-form/recipe-form.component';
+import { IngredientsService } from './ingredients-service/ingredients.service';
+import { ShoppingListService } from './shopping-list-service/shopping-list.service';
+import { RecipeService } from './recipe-service/recipe.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,7 @@ import { RecipeFormComponent } from './recipe-form/recipe-form.component';
     RecipeFormComponent,
   ],
   imports: [BrowserModule, NgbModule, FormsModule],
-  providers: [],
+  providers: [IngredientsService, ShoppingListService, RecipeService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
