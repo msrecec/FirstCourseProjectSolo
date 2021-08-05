@@ -37,6 +37,20 @@ export class RecipeService implements OnInit {
   constructor(private ingredientsService: IngredientsService) {}
 
   /**
+   * Gets the list of recipes
+   *
+   * @returns recipes in the array of recipes
+   */
+
+  getRecipes(): Recipe[] {
+    if (typeof this.recipes !== 'undefined') {
+      return this.recipes;
+    } else {
+      return [];
+    }
+  }
+
+  /**
    * Compares two ingredients
    *
    * @param ingredient1
